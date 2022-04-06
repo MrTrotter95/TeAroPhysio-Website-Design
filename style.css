@@ -349,6 +349,7 @@ body {
 
 .hero-image {
     width: 100%;
+    border-radius: 10px;
 }
 
 .facebook-img {
@@ -380,7 +381,7 @@ body {
 
 .home-image2 {
     width: 100%;
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 .we-offer {
@@ -658,7 +659,7 @@ body {
 .about-us__container-2 {
     padding: 50px 20px 50px 20px;
     margin: 0 auto 100px auto;
-    background-color: #31AEE5;
+    background-image: linear-gradient(to right, rgba(130,97,215,0.99), rgba(243,59,105,0.8));
 }
 
 .sports {
@@ -720,7 +721,7 @@ body {
 
     .about-us__container-2 {
         padding: 100px 50px 100px 50px;
-        margin-bottom: 150px;
+        margin-bottom: 250px;
     }
     .about-us__size-container {
         display: flex;
@@ -739,25 +740,25 @@ body {
     }
     
     .sports__image {
-        border-radius: 50px;
+        border-radius: 10px;
         transition: transform 1s, box-shadow 1s;
     }
 
     .sports__image:hover {
         transition-duration: 500ms;
-        box-shadow: rgba(0, 255, 255, 0.7) 7px 7px 0px 5px;
+        box-shadow: rgba(130,97,215,0.6) 7px 7px 0px 5px;
         transform: scale(1.05);
     }
 
     .affiliations-container {
-        max-width: 1200px;
-        margin: 50px auto 200px auto;
+        max-width: 1150px;
+        margin: 50px auto 250px auto;
         row-gap: 100px;
         column-gap: 100px;
     }
 
     .aff-image {
-        width: 150px;
+        width: 100px;
         transition: transform 1s;
     }
 
