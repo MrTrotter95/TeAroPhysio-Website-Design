@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <title>Book Appointment</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <img src="./images/Logo.svg" alt="logo" class="header__logo">
+            <div class="nav__links">
+                <ul class="nav__ul">
+                    <li class="nav__li"><a href="index.html" class="nav__item">Home</a></li>
+                    <li class="nav__li"><a href="about.html" class="nav__item">About</a></li>
+                    <li class="nav__li"><a href="bookAppointment.html" class="nav__item">Book Now</a></li>
+                    <li class="nav__li"><a href="login.html" class="nav__item">Login</a></li>
+                    <li class="nav__li"><a href="signUp.html" class="nav__item">Sign up</a></li>
+                </ul>
+            </div>
+            <img src="./images/navIcon.svg" alt="nav Icon" class="header__nav-icon" id="toggleNav" onclick="toggleNav()">
+        </nav>
+    </header>
+
+    <div class="book">
+        <h1 class="h1 text-center">Book Appointment</h1>
+        <form class="book-form">
+            <div class="book-form__child-1">
+                <h1 class="h3">Filter</h1>
+                <div class="filter-options">
+                    <div class="filter-options__child-1">
+                        <label for="start-date" class="form-label-text text-center">Start Date</label>
+                        <input type="date" name="start-date" class="input-field-dates" id="startDate">
+                    </div>
+                    <div class="filter-options__child-2">
+                        <label for="end-date" class="form-label-text text-center">End Date</label>
+                        <input type="date" name="end-date" class="input-field-dates" id="endDate">
+                    </div>
+                </div>
+                <button type="button" class="button__primary find-app" onclick="showBooking()">Find App</button>
+            </div>
+
+            <div class="book-form__child-2">
+                <h1 class="h3">Upcoming Slots</h1>
+                <div class="booking-info">
+                    <p class="p1 text-center">Date</p>
+                    <p class="p1 text-center">Time</p>
+                    <p class="p1 text-center">Practitioner</p>
+                </div>
+                <div class="upcoming-slots" id="upcomingSlots">
+                </div>
+            </div>
+
+            <h1 class="h3">Appointment Type</h1>
+            <div class="book-form__child-3">
+                <select name="app-type" class="selection-box" id="appointmentType">
+                    <option value="ACC initial consultation">ACC Initial Consult</option>
+                    <option value="ACC follow up consultation">ACC Follow Up Consultation</option>
+                    <option value="private intial consultation">Private Initial Consult</option>
+                    <option value="private follow up consultation">Private Follow Up Consultation</option>
+                    <option value="TeleHealth ACC intial consultation">Tele-Health ACC Initial Consult</option>
+                    <option value="TeleHealth ACC follow up consultation">Tele-Health ACC Follow Up Consultation</option>
+                    <option value="TeleHealth private consultation">Tele-Health Private Initial Consult</option>
+                    <option value="TeleHealth private follow up consultation">Tele-Health Private Follow Up Consultation</option>
+                </select>
+                <input type="submit" value="Book" class="button__secondary submit-button" onclick="bookApp(event)">
+            </div>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__child-1">
+            <h1 class="h4-footer">Opening Hours</h1>
+            <p class="p1">Mon - Fri: 8:00am - 5:30pm</p>
+            <p class="p1">Sat - Sun: Closed</p>
+        </div>
+        <div class="footer__child-2">
+            <h1 class="h4-footer">Contact Details</h1>
+            <p class="p1"><span class="bold">Email: </span>info@tearophysio.co.nz</p>
+            <p class="p1"><span class="bold">Phone: </span>04 384 6460</p>
+        </div>
+        <div class="footer__child-3">
+            <h1 class="h4-footer">Social Media</h1>
+            <img class="footer__facebook-img" src="./images/facebook.svg"/>
+            <img class="footer__instagram-img " src="./images//instagram.svg"/>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

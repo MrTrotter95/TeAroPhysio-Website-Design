@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <img src="./images/Logo.svg" alt="logo" class="header__logo">
+            <div class="nav__links">
+                <ul class="nav__ul">
+                    <li class="nav__li"><a href="#" class="nav__item">Home</a></li>
+                    <li class="nav__li"><a href="about.html" class="nav__item">About</a></li>
+                    <li class="nav__li"><a href="bookAppointment.html" class="nav__item">Book Now</a></li>
+                    <li class="nav__li"><a href="login.html" class="nav__item">Login</a></li>
+                    <li class="nav__li"><a href="signUp.html" class="nav__item">Sign up</a></li>
+                </ul>
+            </div>
+            <img src="./images/navIcon.svg" alt="nav Icon" class="header__nav-icon" id="toggleNav" onclick="toggleNav()">
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero__child-1">
+            <div class="hero__content">
+                <h1 class="hero-text__main text-end">Te Aro Physio Therapy</h1>
+                <h2 class="hero-text__secondary text-end">Centre of Excellence</h2>
+                <div class="links-container">
+                    <img class="facebook-img" src="./images/facebook.svg"/>
+                    <img class="instagram-img" src="./images//instagram.svg"/>
+                    <button class="button__primary hero__button" onclick="location.href='bookAppointment.html'">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-us">
+        <div class="aboutUs__child-1">
+            <h1 class="h1">About Us</h1>
+            <p class="p1">At Te Aro Physiotherapy & Pilates we love what we do and we strive for excellence in all 
+                aspects of our care.</p>
+            <p class="p1">Our goal is to get you back on your feet and back to work, the sports field, the dance 
+                floor or just back to pain-free living.</p>
+        </div>
+        <div class="aboutUs__child-2">
+            <img class="home-image2" src="./images/homeimage2.jpg"/>
+        </div>
+    </div>
+
+    <div class="we-offer">
+        <div class="we-offer__child">
+            <h1 class="h1 white text-center">We Offer</h1>
+            <p class="p1 white text-center">Experienced physiotherapists using proven assessment and diagnostic 
+                frame works.</p>
+            <p class="p1 white text-center">A tailored treatment approach to ensure a fast recovery and return 
+                to the activities you love.</p>
+            <p class="p1 white text-center">The full spectrum of musculoskeletal care, a "one-stop-shop" for your 
+                injury or chronic condition. We come to your work place, sports venue or dance class, treat you in 
+                the clinic and refer you to other specialists, whatever is needed to get you where you want to be.</p>
+            <p class="p1 white text-center">Excellence in action: we are one of the first clinics in Wellington to 
+                achieve accreditation-striving for a very high standard of service delivery. All therapists hold postgraduate qualifications.</p>
+        </div>
+    </div>
+
+    <div class="right-place">
+        <div class="right-place__child-1">
+            <h1 class="h1 text-center">Right Place For You?</h1>
+            <p class="p1 text-center">We are experienced in treating  musculoskeletal injuries and can help you 
+                right from day one of your injury until you are fully active again. We can help with chronic 
+                conditions and offer advice and exercise prescription to enhance your well-being.</p>
+            <p class="p1 text-center">If you experience pain or stiffness in any part of your body, our physiotherapists 
+                are trained to assess and diagnose your problem. We help you understand the issues involved, what you 
+                can do to help yourself, and provide the necessary hands-on treatment to help you recover and return to the things you love doing.</p>
+            <p class="p1 text-center">We can help with spinal problems, sport specific rehabilitation and we are unique 
+                in providing dance specific advice and treatment.</p>
+        </div>
+        <div class="right-place__child-2">
+            <button class="button__primary" onclick="location.href='bookAppointment.html'">Book Now</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__child-1">
+            <h1 class="h4-footer">Opening Hours</h1>
+            <p class="p1">Mon - Fri: 8:00am - 5:30pm</p>
+            <p class="p1">Sat - Sun: Closed</p>
+        </div>
+        <div class="footer__child-2">
+            <h1 class="h4-footer">Contact Details</h1>
+            <p class="p1"><span class="bold">Email: </span>info@tearophysio.co.nz</p>
+            <p class="p1"><span class="bold">Phone: </span>04 384 6460</p>
+        </div>
+        <div class="footer__child-3">
+            <h1 class="h4-footer">Social Media</h1>
+            <img class="footer__facebook-img" src="./images/facebook.svg"/>
+            <img class="footer__instagram-img " src="./images//instagram.svg"/>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

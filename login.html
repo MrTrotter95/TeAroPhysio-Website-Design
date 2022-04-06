@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <img src="./images/Logo.svg" alt="logo" class="header__logo">
+            <div class="nav__links">
+                <ul class="nav__ul">
+                    <li class="nav__li"><a href="index.html" class="nav__item">Home</a></li>
+                    <li class="nav__li"><a href="about.html" class="nav__item">About</a></li>
+                    <li class="nav__li"><a href="bookAppointment.html" class="nav__item">Book Now</a></li>
+                    <li class="nav__li"><a href="login.html" class="nav__item">Login</a></li>
+                    <li class="nav__li"><a href="signUp.html" class="nav__item">Sign up</a></li>
+                </ul>
+            </div>
+            <img src="./images/navIcon.svg" alt="nav Icon" class="header__nav-icon" id="toggleNav" onclick="toggleNav()">
+        </nav>
+    </header>
+
+    <div class="login">
+        <div class="login__child-1">
+            <h1 class="h1 text-center">Login</h1>
+        </div>
+        <form class="login__form">
+            <div class="form__child-1">
+                <label for="email" class="form-label-text">Email Adress</label>
+                <input type="text" name="email" class="input-field loginEmail" placeholder="example@mail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            </div>
+            <div class="form__child-2">
+                <label for="password" class="form-label-text">Password</label>
+                <input type="password" name="password" class="input-field loginPass" placeholder="********" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="your password is incorrect">
+            </div>
+            <div class="form__child-3">
+                <input type="submit" value="Login" class="button__primary submit-button" onclick="login()">
+                <input type="button" onclick="location.href='signUp.html'" value="Sign Up" class="button__secondary submit-button">
+            </div>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__child-1">
+            <h1 class="h4-footer">Opening Hours</h1>
+            <p class="p1">Mon - Fri: 8:00am - 5:30pm</p>
+            <p class="p1">Sat - Sun: Closed</p>
+        </div>
+        <div class="footer__child-2">
+            <h1 class="h4-footer">Contact Details</h1>
+            <p class="p1"><span class="bold">Email: </span>info@tearophysio.co.nz</p>
+            <p class="p1"><span class="bold">Phone: </span>04 384 6460</p>
+        </div>
+        <div class="footer__child-3">
+            <h1 class="h4-footer">Social Media</h1>
+            <img class="footer__facebook-img" src="./images/facebook.svg"/>
+            <img class="footer__instagram-img " src="./images//instagram.svg"/>
+        </div>
+    </footer>
+</body>
+</html>
