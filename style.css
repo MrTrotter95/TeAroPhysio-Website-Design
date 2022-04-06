@@ -4,6 +4,8 @@
 /* ---------------------     GLOBAL RESET     ---------------------  */
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    
 }
 
 body {
@@ -18,7 +20,7 @@ body {
     background-color: white;
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 3;
 }
 
 .header__logo {
@@ -51,19 +53,18 @@ body {
 .nav__item {
     width: 100%;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     color: #0a2c3a;
-    text-decoration: underline;
-    text-decoration-color: white;
-    text-underline-offset: 3px;
-    text-decoration-thickness: 2px;
     padding: 10px 20px;
     text-align: center;
+    text-decoration: none;
 }
 
 .nav__item:hover {
-    color: #e84725;
-    text-decoration-color: #e84725;
+    color: #413df7;
+    text-decoration: underline;
+    text-decoration-color: #413df7;
+    text-decoration-thickness: 2px;
     text-underline-offset: 7px;
 }
 
@@ -134,14 +135,15 @@ body {
 .button__primary {
     font-family: Montserrat;
     padding: 20px 60px;
-    background-color: #0a2c3a;
-    border: solid 3px #0a2c3a;
+    background-color: #413df7;
+    border: solid 3px #413df7;
     border-radius: 5px;
     font-weight: 500;
     color: white;
     font-size: 15px;
     cursor: pointer;
     transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .button__primary:hover {
@@ -169,20 +171,17 @@ body {
 /* -----MOBILE 360px- 1000px ---------------- END OF GLOBAL SETTINGS ---------------------   */
 /* -----MOBILE 360px- 1000px ---------------- START OF TEXT SETTINGS ---------------------   */
 .h1 {
-    font-size: 38px;
+    font-size: 30px;
     font-weight: 800;
-    color: #0a2c3a;
 }
 
 .h2 {
     font-size: 22px;
-    color: #0a2c3a;
 }
 
 .h3 {
     font-size: 18px;
     font-weight: 800;
-    color: #0a2c3a;
 }
 
 .h4 {
@@ -198,6 +197,14 @@ body {
     color: white;
 }
 
+.blue {
+    color: #413df7;
+}
+
+.orange {
+    color: #e84725;
+}
+
 .bold {
     font-weight: 700;
 }
@@ -210,7 +217,8 @@ body {
 /* -----DESKTOP 1000px - 1600px ---------------- START OF TEXT SETTINGS ---------------------   */
 @media (min-width: 1000px) {
     .h1 {
-        font-size: 45px;
+        font-size: 32px;
+        margin-bottom: 10px;
     }
 
     .h2 {
@@ -224,6 +232,7 @@ body {
     .p1 {
         font-size: 18px;
         line-height: 25px;
+        margin-top: 0;
     }
 }
 /* -----DESKTOP 1000px - 1600px ---------------- END OF TEXT SETTINGS ---------------------   */
@@ -312,12 +321,16 @@ body {
 /* -----DESKTOP 1000px PLUS ---------------- END OF FOOTER SETTINGS ---------------------   */
 
 /* -----MOBILE 360px- 1000px ---------------- START OF HOME PAGE SETTINGS ---------------------   */
+.hero {
+    margin: 0 20px 50px 20px;
+}
+
 .hero-text__main {
     margin: 0 0 0 20px;
     padding-top: 30px;
     font-size: 35px;
     font-weight: 900;
-    color: #0a2c3a;
+    color: black;
 }
 
 .hero-text__secondary {
@@ -325,25 +338,20 @@ body {
     padding-bottom: 30px;
     font-size: 18px;
     font-weight:800;
-    color: #0a2c3a;
+    color: black;
 }
-
-.hero__child-1 {
-    background-image: url("./images/HomeImage.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 300px;
-    width: 90vw;
-    margin: 20px auto;
-}
-
 
 .links-container {
-    margin-top: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-left: 20px;
+}
+
+.hero__content-image {
+    margin-top: 50px;
+}
+
+.hero-image {
+    width: 100%;
+    border-radius: 50px;
 }
 
 .facebook-img {
@@ -352,6 +360,17 @@ body {
 
 .instagram-img {
     display: none;
+}
+
+.hero-additional {
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow-icon {
+    width: 40px;
 }
 
 .about-us {
@@ -366,8 +385,8 @@ body {
 .we-offer {
     display: flex;
     justify-content: center;
-    padding: 50px 20px;
-    background-color: #2e8edc;
+    padding: 50px 40px;
+    background-color: white;
 }
 
 .right-place {
@@ -385,19 +404,21 @@ body {
 /* -----MOBILE 360px- 1000px ---------------- END OF HOME PAGE SETTINGS ---------------------   */
 /* -----DESKTOP 1000px - 1600px ---------------- START OF HOME PAGE SETTINGS ---------------------   */
 @media (min-width: 1000px) {
+    .hero {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
     
     .hero-text__main {
-        margin-left: 50px;
+        margin-left: 0px;
         padding-top: 50px;
-        font-size: 80px;
-        margin-right: 50px;
+        font-size: 50px;
     }
     
     .hero-text__secondary {
-        margin-left: 50px;
+        margin-left: 0px;
         padding-bottom: 50px;
-        font-size: 42px;
-        margin-right: 50px;
+        font-size: 35px;
     }
 
     .hero__child-1 {
@@ -407,7 +428,9 @@ body {
     }
 
     .links-container {
-        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        max-width: fit-content;
         margin: 0px 50px 0 0;
     }
 
@@ -415,14 +438,22 @@ body {
         display: block;
         height: 40px;
         cursor: pointer;
-        margin-right: 15px;
+        margin-left: 50px;
     }
     
     .instagram-img {
         display: block;
         height: 40px;
         cursor: pointer;
-        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .arrow-icon {
+        transition: all 1s;
+    }
+
+    .arrow-icon:hover {
+        padding-top: 50px;
     }
 
     .about-us {
@@ -433,28 +464,29 @@ body {
     }
 
     .aboutUs__child-1 {
-        min-width: 400px;
+        min-width: 300px;
         max-width: 500px;
         margin-right: 50px;
     }
 
     .aboutUs__child-2 {
-        max-width: 650px;
+        max-width: 500px;
     }
 
     .home-image2 {
-        box-shadow: rgba(10, 44, 58, 0.7) 5px 5px 0px 2px;
+        box-shadow: rgba(65, 61, 247, 0.7) 5px 5px 0px 2px;
         transition: transform 1s, box-shadow 1s;
     }
 
     .home-image2:hover {
         transition-duration: 500ms;
-        box-shadow: rgba(10, 44, 58, 1.0) 15px 15px 0px 5px;
-        transform: scale(1.05);
+        box-shadow: rgba(65, 61, 247, 1.0) 10px 10px 0px 5px;
+        transform: scale(1.025);
     }
 
     .we-offer {
-        margin: 50px auto;
+        background-color: white;
+        padding: 50px auto;
     }
 
     .we-offer__child {
@@ -478,36 +510,50 @@ body {
 /* -----DESKTOP 1000px - 1600px ---------------- END OF HOME PAGE SETTINGS ---------------------   */
 /* -----DESKTOP 1600px PLUS ---------------- START OF HOME PAGE SETTINGS ---------------------   */
 @media (min-width: 1600px) {
+    .hero {
+        position: fixed;
+        left: 200px;
+        right: 200px;
+        margin: 100px auto 100px auto;
+        display: flex;
+        justify-content: center;
+        column-gap: 150px;
+        align-items: center;
+        z-index: 1;
+    }
 
-    .hero__content {
-        top: 200px;
-        right: 0px;
-        position: absolute;
+    .hero__content-text {
+        align-items: center;
+    }
+
+    .hero__content-image {
+        max-width: 700px;
     }
 
     .hero-text__main {
-        background-color: rgba(255,255,255,0.6);
-        color: #e84725;
-        margin: 0;
-        padding: 5px 25px;
+        margin-bottom: 10px;
     }
 
     .hero-text__secondary {
-        background-color: rgba(255,255,255,0.6);
-        color: #e84725;
-        margin: 15px 0 0 auto;
-        padding: 10px 25px 10px 25px;
-        width: fit-content;
-        display: flex;
-        justify-content: flex-end;
     }
 
-    .links-container {
-        margin: 25px 115px 0 0;
+    .hero-additional {
+        background-color: white;
+        position: relative;
+        margin-top: 650px;
+        margin-bottom: 0;
+        padding-top: 50px;
+        padding-bottom: 200px;
+        z-index: 2;
     }
     
     .about-us {
-        margin: 300px auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 200px;
+        background-color: white;
+        position: relative;
+        z-index: 2;
     }
 
     .aboutUs__child-1 {
@@ -523,17 +569,16 @@ body {
     }
     
     .we-offer {
-        background-color: #FBFBFB;
-        padding: 20px 50px 50px 50px;
-        border-radius: 25px;
-        box-shadow: rgba(232, 71, 37, 0.7) 5px 5px 0px 2px;
-        margin: 50px 0 50px 250px;
-        max-width: 600px;
-        padding: 50px;
+        padding: 50px 50px 200px 50px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .we-offer__child {
+        max-width: 900px;
     }
 
     .right-place {
-        
         margin: 100px;
         max-width: 600px;
         padding: 50px;
@@ -701,11 +746,11 @@ body {
     padding: 20px 50px 50px 50px;
     background-color: #FBFBFB;
     border-radius: 25px;
-    box-shadow: rgba(99, 99, 99, 0.1) 5px 5px 0px 2px;
+    box-shadow: rgba(65, 61, 247, 0.1) 5px 5px 0px 2px;
 }
 
 .book-form:hover {
-    box-shadow: rgba(10, 44, 58, 0.7) 5px 5px 0 2px; 
+    box-shadow: rgba(65, 61, 247, 0.2) 5px 5px 0px 2px;
 }
 
 .book-form__child-1 {
@@ -717,8 +762,10 @@ body {
 }
 
 .input-field-dates {
-    border-radius: 25px;
-    border: 2px solid #0a2c3a;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #413df7;
     padding: 12px;
     font-size: 14px;
     font-family: montserrat;
@@ -781,8 +828,11 @@ body {
 }
 
 .selection-box {
-    border-radius: 25px;
-    border: 2px solid #0a2c3a;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #413df7;
     padding: 12px 0px 12px 10px;
     font-size: 14px;
     font-family: montserrat;
@@ -802,11 +852,11 @@ body {
     background-color: #FBFBFB;
     padding: 20px 50px 50px 50px;
     border-radius: 25px;
-    box-shadow: rgba(99, 99, 99, 0.1) 5px 5px 0px 2px;
+    box-shadow: rgba(65, 61, 247, 0.1) 5px 5px 0px 2px;
 }
 
 .login__form:hover {
-    box-shadow: rgba(10, 44, 58, 0.7) 5px 5px 0 2px; 
+    box-shadow: rgba(65, 61, 247, 0.2) 5px 5px 0 2px; 
 }
 
 .form__child-1, .form__child-2 {
@@ -840,11 +890,11 @@ body {
     background-color: #FBFBFB;
     padding: 20px 50px 50px 50px;
     border-radius: 25px;
-    box-shadow: rgba(99, 99, 99, 0.1) 5px 5px 0px 2px;
+    box-shadow: rgba(65, 61, 247, 0.1) 5px 5px 0px 2px;
 }
 
 .sign-up__form:hover {
-    box-shadow: rgba(10, 44, 58, 0.7) 5px 5px 0 2px; 
+    box-shadow: rgba(65, 61, 247, 0.2) 5px 5px 0 2px; 
 }
 
 .sign-up__child-1, .sign-up__child-2, .sign-up__child-3 {
@@ -860,8 +910,10 @@ body {
 }
 
 .input-field {
-    border-radius: 25px;
-    border: 2px solid #0a2c3a;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #413df7;
     padding: 12px;
     font-size: 14px;
     font-family: montserrat;
