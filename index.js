@@ -2,8 +2,8 @@
 /* Arrow Function to Toggle the Navbar into desktop mode.
 the 'active' class will be added to navLinks and display the desktop view at 1000px. check CSS line 102.*/
 toggleNav = () => {
-    const navLinks = document.getElementsByClassName('nav__links')[0]
-    navLinks.classList.toggle('active')
+    const navLinks = document.getElementsByClassName('nav__links')[0];
+    navLinks.classList.toggle('active');
 }
 
 
