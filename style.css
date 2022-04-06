@@ -61,9 +61,9 @@ body {
 }
 
 .nav__item:hover {
-    color: #413df7;
+    color: #cb46d3;
     text-decoration: underline;
-    text-decoration-color: #413df7;
+    text-decoration-color: #cb46d3;
     text-decoration-thickness: 2px;
     text-underline-offset: 7px;
 }
@@ -127,7 +127,7 @@ body {
 }
 
 .text-link {
-    color: #31AEE5;
+    color: #413df7;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -148,14 +148,14 @@ body {
 
 .button__primary:hover {
     background-color: white;
-    color: #0a2c3a;
+    color: black;
 }
 
 .button__secondary {
     font-family: Montserrat;
     padding: 20px 60px;
-    background-color: #e84725;
-    border: solid 3px #e84725;
+    background-color: #cb46d3;
+    border: 3px solid #cb46d3;
     border-radius: 5px;
     font-weight: 500;
     color: white;
@@ -165,7 +165,7 @@ body {
 }
 
 .button__secondary:hover {
-    color: #0a2c3a;
+    color: black;
     background-color: white;
 }
 /* -----MOBILE 360px- 1000px ---------------- END OF GLOBAL SETTINGS ---------------------   */
@@ -244,17 +244,13 @@ body {
 
 /* -----MOBILE 360px- 1000px ---------------- START OF FOOTER SETTINGS ---------------------   */
 .footer {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 75px 100px 75px 25px;
-    background-color: #e84725;
-    width: fit-content;
-    border: 5px solid #e84725;
-    border-radius: 50px;
     margin: 100px 0 50px 50px;
-    transition: background-color 500ms ease-in-out, border 500ms ease-in-out;
-    color: white;
 }
 
 .footer__child-2 {
@@ -268,9 +264,6 @@ body {
 .h4-footer {
     font-size: 23px;
     font-weight: 800;
-    text-decoration: underline;
-    text-decoration-color: #e84725;
-    text-decoration-thickness: 4px;
 }
 
 .footer__facebook-img {
@@ -286,18 +279,12 @@ body {
     cursor: pointer;
     margin-right: 50px;
 }
-
-.footer:hover {
-    color: black;
-    transition-duration: 500ms;
-    background-color: white;
-}
 /* -----MOBILE 360px- 1000px ---------------- END OF FOOTER SETTINGS ---------------------   */
 /* -----DESKTOP 1000px PLUS ---------------- START OF FOOTER SETTINGS ---------------------   */
 @media (min-width: 1000px) {
     .footer {
-        margin-left: 50px;
-        padding-right: 200px;
+        background-color: white;
+        margin: 0;
     }
     
     .footer__child-1 {
@@ -321,7 +308,18 @@ body {
 /* -----DESKTOP 1000px PLUS ---------------- END OF FOOTER SETTINGS ---------------------   */
 
 /* -----MOBILE 360px- 1000px ---------------- START OF HOME PAGE SETTINGS ---------------------   */
+.slanted-bg {
+    position: fixed;
+    z-index: 1;
+}
+
+.slanted-img {
+    width: 100vw;
+}
+
 .hero {
+    z-index: 2;
+    position: relative;
     margin: 0 20px 50px 20px;
 }
 
@@ -351,7 +349,6 @@ body {
 
 .hero-image {
     width: 100%;
-    border-radius: 50px;
 }
 
 .facebook-img {
@@ -367,6 +364,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .arrow-icon {
@@ -374,6 +373,8 @@ body {
 }
 
 .about-us {
+    position: relative;
+    z-index: 2;
     margin: 20px 20px 50px 20px;
 }
 
@@ -386,14 +387,17 @@ body {
     display: flex;
     justify-content: center;
     padding: 50px 40px;
-    background-color: white;
+    position: relative;
+    z-index: 2;
 }
 
 .right-place {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 50px 20px;
+    padding: 50px 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .right-place__child-2 {
@@ -404,27 +408,33 @@ body {
 /* -----MOBILE 360px- 1000px ---------------- END OF HOME PAGE SETTINGS ---------------------   */
 /* -----DESKTOP 1000px - 1600px ---------------- START OF HOME PAGE SETTINGS ---------------------   */
 @media (min-width: 1000px) {
+    .slanted-bg {
+        position: fixed;
+        z-index: 1;
+    }
+
+    .slanted-img {
+        width: 100vw;
+    }
+
     .hero {
-        margin-left: 100px;
-        margin-right: 100px;
+        position: relative;
+        margin: 50px;
+        z-index: 2;
     }
     
     .hero-text__main {
+        color: white;
         margin-left: 0px;
         padding-top: 50px;
         font-size: 50px;
     }
     
     .hero-text__secondary {
+        color: white;
         margin-left: 0px;
         padding-bottom: 50px;
         font-size: 35px;
-    }
-
-    .hero__child-1 {
-        margin-top: 40px;
-        height: 800px;
-        border-radius: 50px;
     }
 
     .links-container {
@@ -457,10 +467,13 @@ body {
     }
 
     .about-us {
+        position: relative;
+        z-index: 2;
         margin: 50px auto;
         display: flex;
         align-items: center;
         justify-content: center;
+        color: white;
     }
 
     .aboutUs__child-1 {
@@ -474,18 +487,19 @@ body {
     }
 
     .home-image2 {
-        box-shadow: rgba(65, 61, 247, 0.7) 5px 5px 0px 2px;
+        box-shadow: rgba(134, 98, 214, 1.0) 5px 5px 0px 2px;
         transition: transform 1s, box-shadow 1s;
     }
 
     .home-image2:hover {
         transition-duration: 500ms;
-        box-shadow: rgba(65, 61, 247, 1.0) 10px 10px 0px 5px;
+        box-shadow: rgba(243, 59, 105, 0.6) 10px 10px 0px 5px;
         transform: scale(1.025);
     }
 
     .we-offer {
-        background-color: white;
+        position: relative;
+        z-index: 2;
         padding: 50px auto;
     }
 
@@ -494,9 +508,13 @@ body {
     }
 
     .right-place {
+        position: relative;
+        z-index: 2;
+        background-image: linear-gradient(to right, rgba(130,97,215,0.99), rgba(243,59,105,0.8));
         margin-left: auto;
         margin-right: auto;
         align-items: center;
+        color: white;
     }
 
     .right-place__child-1 {
@@ -510,6 +528,15 @@ body {
 /* -----DESKTOP 1000px - 1600px ---------------- END OF HOME PAGE SETTINGS ---------------------   */
 /* -----DESKTOP 1600px PLUS ---------------- START OF HOME PAGE SETTINGS ---------------------   */
 @media (min-width: 1600px) {
+    .slanted-bg {
+        position: fixed;
+        z-index: 1;
+    }
+
+    .slanted-img {
+        width: 100vw;
+    }
+
     .hero {
         position: fixed;
         left: 200px;
@@ -519,7 +546,7 @@ body {
         justify-content: center;
         column-gap: 150px;
         align-items: center;
-        z-index: 1;
+        z-index: 2;
     }
 
     .hero__content-text {
@@ -531,27 +558,33 @@ body {
     }
 
     .hero-text__main {
+        color: white;
         margin-bottom: 10px;
     }
 
     .hero-text__secondary {
+        color: white;
     }
 
     .hero-additional {
-        background-color: white;
-        position: relative;
+        background-color: none;
+        position: fixed;
+        left: 200px;
+        right: 200px;
         margin-top: 650px;
         margin-bottom: 0;
         padding-top: 50px;
         padding-bottom: 200px;
-        z-index: 2;
+        z-index: 1;
     }
     
     .about-us {
-        margin-top: 0;
+        margin-top: 900px;
         margin-bottom: 0;
+        padding-top: 200px;
         padding-bottom: 200px;
         background-color: white;
+        color: black;
         position: relative;
         z-index: 2;
     }
@@ -569,24 +602,36 @@ body {
     }
     
     .we-offer {
-        padding: 50px 50px 200px 50px;
+        background-image: linear-gradient(to right, rgba(130,97,215,0.99), rgba(243,59,105,0.8));
+        background-color: white;
+        color: white;
+        padding: 100px 50px 100px 50px;
         position: relative;
         z-index: 2;
     }
 
     .we-offer__child {
-        max-width: 900px;
+        max-width: 700px;
     }
 
     .right-place {
-        margin: 100px;
-        max-width: 600px;
-        padding: 50px;
-        background-color: #FBFBFB;
+        position: relative;
+        background-color: white;
+        background-image: none;
+        color: black;
+        z-index: 2;
+        margin: 0 auto;
+        padding: 150px 50px;
         padding: 20px 50px 50px 50px;
-        border-radius: 25px;
-        box-shadow: rgba(10, 44, 58, 0.7) 5px 5px 0px 2px;
+    }
 
+    .right-place__child-1 {
+        max-width: 700px;
+        padding: 100px 0 50px 0;
+    }
+
+    .right-place__child-2 {
+        padding-bottom: 100px;
     }
 }
 
@@ -913,14 +958,14 @@ body {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 2px solid #413df7;
+    border-bottom: 2px solid #cb46d3;
     padding: 12px;
     font-size: 14px;
     font-family: montserrat;
 }
 
 .input-field:focus {
-    outline: 1px solid #31AEE5;
-    border: 1px solid #31AEE5;
+    outline: 1px solid #cb46d3;
+    border: 1px solid #cb46d3;
 }
 /* -----360px PLUS--------------- END OF SIGN UP PAGE SETTINGS ---------------------   */
