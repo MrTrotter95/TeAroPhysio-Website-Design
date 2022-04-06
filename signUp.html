@@ -31,16 +31,16 @@
         </div>
         <form class="sign-up__form" id="signUpForm">
             <div class="sign-up__child-1">
-                <label for="f-name" class="form-label-text">Name</label>
-                <input type="text" name="name" placeholder="first & last name" class="input-field sign-up__fName" required pattern="[A-Za-z\s]{1,32}" title="Must contain letters only">
+                <label for="Name" class="form-label-text">Name</label>
+                <input type="text" name="name" id="Name" placeholder="first & last name" class="input-field sign-up__fName" required pattern="[A-Za-z\s]{1,32}" title="Must contain letters only">
             </div>
             <div class="sign-up__child-2">
-                <label for="l-name" class="form-label-text">Email</label>
-                <input type="text" name="email" placeholder="example@mail.com" class="input-field sign-up__email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                <label for="email" class="form-label-text">Email</label>
+                <input type="text" name="email" id="email" placeholder="example@mail.com" class="input-field sign-up__email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
             </div>
             <div class="sign-up__child-3">
-                <label for="email" class="form-label-text">Password</label>
-                <input type="password" name="password" placeholder="********" class="input-field sign-up__pass" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                <label for="password" class="form-label-text">Password</label>
+                <input type="password" name="password" id="password" placeholder="********" class="input-field sign-up__pass" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
             </div>
             <input type="submit" class="button__secondary" onclick=" signedUp()" >
@@ -60,8 +60,8 @@
         </div>
         <div class="footer__child-3">
             <h1 class="h4-footer">Social Media</h1>
-            <img class="footer__facebook-img" src="./images/facebook.svg"/>
-            <img class="footer__instagram-img " src="./images//instagram.svg"/>
+            <img class="footer__facebook-img" src="./images/facebook.svg" alt="Facebook link"/>
+            <img class="footer__instagram-img " src="./images//instagram.svg" alt="Instagram link"/>
         </div>
     </footer>
 </body>

@@ -31,12 +31,12 @@
         </div>
         <form class="login__form">
             <div class="form__child-1">
-                <label for="email" class="form-label-text">Email Adress</label>
-                <input type="text" name="email" class="input-field loginEmail" placeholder="example@mail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                <label for="loginEmail" class="form-label-text">Email Adress</label>
+                <input type="text" name="email" id="loginEmail" class="input-field loginEmail" placeholder="example@mail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
             </div>
             <div class="form__child-2">
-                <label for="password" class="form-label-text">Password</label>
-                <input type="password" name="password" class="input-field loginPass" placeholder="********" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                <label for="loginPassword" class="form-label-text">Password</label>
+                <input type="password" name="password" id="loginPassword" class="input-field loginPass" placeholder="********" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 title="your password is incorrect">
             </div>
             <div class="form__child-3">
@@ -59,8 +59,8 @@
         </div>
         <div class="footer__child-3">
             <h1 class="h4-footer">Social Media</h1>
-            <img class="footer__facebook-img" src="./images/facebook.svg"/>
-            <img class="footer__instagram-img " src="./images//instagram.svg"/>
+            <img class="footer__facebook-img" src="./images/facebook.svg" alt="Facebook link"/>
+            <img class="footer__instagram-img " src="./images//instagram.svg" alt="Instagram link"/>
         </div>
     </footer>
 </body>
