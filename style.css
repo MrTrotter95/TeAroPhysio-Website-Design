@@ -55,17 +55,31 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: #0a2c3a;
-    padding: 10px 20px;
+    margin: 0 20px;
+    padding: 10px 5px 3px 5px;
     text-align: center;
     text-decoration: none;
+    position: relative;
 }
 
-.nav__item:hover {
-    color: #cb46d3;
-    text-decoration: underline;
-    text-decoration-color: #cb46d3;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 7px;
+/*pseudo element for fancy hover animation */
+.nav__item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #cb46d3;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+}
+
+/*pseudo element for fancy hover animation */
+.nav__item:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .header__nav-icon {
@@ -144,12 +158,35 @@ body {
     cursor: pointer;
     transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+}
+
+.button__primary::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+    z-index: -1;
+}
+
+.button__primary:hover::after {
+    color: black;
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .button__primary:hover {
-    background-color: white;
     color: black;
 }
+
 
 .button__secondary {
     font-family: Montserrat;
@@ -163,15 +200,42 @@ body {
     cursor: pointer;
     transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+}
+
+.button__secondary::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+    z-index: -1;
+}
+
+.button__secondary:hover::after {
+    color: black;
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .button__secondary:hover {
     color: black;
-    background-color: white;
 }
 /* -----MOBILE 360px- 1000px ---------------- END OF GLOBAL SETTINGS ---------------------   */
 /* -----MOBILE 360px- 1000px ---------------- START OF TEXT SETTINGS ---------------------   */
 .h1 {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.h1-colored {
     font-size: 30px;
     font-weight: 800;
 }
@@ -222,6 +286,11 @@ body {
         margin-bottom: 10px;
     }
 
+    .h1-colored {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
     .h2 {
         font-size: 26px;
     }
@@ -240,6 +309,11 @@ body {
 @media (min-width: 1600px) {
     .h1 {
         font-size: 38px;
+    }
+
+    .h1-colored {
+        font-size: 38px;
+        background: linear-gradient( #8261d7, #f33b69 );
     }
 }
 
@@ -599,6 +673,13 @@ body {
         z-index: 2;
     }
 
+    .webkit {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+
     .aboutUs__child-1 {
         margin-left: 50px;
         margin-right: 50px;
@@ -612,7 +693,7 @@ body {
     }
     
     .we-offer {
-        background-image: linear-gradient(to right, rgba(130,97,215,1.0), rgba(243,59,105,0.9));
+        background-image: linear-gradient(to top right, rgba(130,97,215,1.0), rgba(243,59,105,0.9));
         background-color: white;
         color: white;
         padding: 100px 50px 100px 50px;
@@ -631,8 +712,7 @@ body {
         color: black;
         z-index: 2;
         margin: 0 auto;
-        padding: 150px 50px;
-        padding: 20px 50px 50px 50px;
+        padding: 100px 50px;
     }
 
     .right-place__child-1 {
@@ -755,7 +835,7 @@ body {
 
     .sports__image:hover {
         transition-duration: 500ms;
-        box-shadow: rgba(130,97,215,0.6) 7px 7px 0px 5px;
+        box-shadow: rgba(134, 98, 214, 0.9) 0px 25px 20px -20px;
         transform: scale(1.05);
     }
 
