@@ -187,7 +187,6 @@ body {
     color: black;
 }
 
-
 .button__secondary {
     font-family: Montserrat;
     padding: 20px 60px;
@@ -316,7 +315,6 @@ body {
         background: linear-gradient( #8261d7, #f33b69 );
     }
 }
-
 /* -----MOBILE 360px- 1000px ---------------- START OF FOOTER SETTINGS ---------------------   */
 .footer {
     position: relative;
@@ -333,6 +331,10 @@ body {
 }
 
 .footer__child-3 {
+    margin: 50px 0 0 0;
+}
+
+.footer__child-4{
     margin: 50px 0 0 0;
 }
 
@@ -378,11 +380,20 @@ body {
         margin-left: 50px;
     }
 
+    .footer__child-4 {
+        margin-left: 50px;
+    }
+
+    .location {
+        width: 350px;
+        height: 300px;
+        border: 0;
+    }
+
     .h4-footer {
         font-size: 28px;
         font-weight: 800;
     }
-
 }
 /* -----DESKTOP 1000px PLUS ---------------- END OF FOOTER SETTINGS ---------------------   */
 
@@ -679,7 +690,6 @@ body {
         -webkit-text-fill-color: transparent;
     }
     
-
     .aboutUs__child-1 {
         margin-left: 50px;
         margin-right: 50px;
@@ -730,7 +740,6 @@ body {
         height: 1100px;
     }
 }
-
 /* -----DESKTOP 1600px PLUS ---------------- END OF HOME PAGE SETTINGS ---------------------   */
 /* -----MOBILE 360px- 1000px ---------------- START OF ABOUT PAGE SETTINGS ---------------------   */
 .title {
@@ -869,6 +878,31 @@ body {
 }
 /* -----DESKTOP 1000px - 1600px ---------------- END OF ABOUT PAGE SETTINGS ---------------------   */
 /* -----360px PLUS ---------------- START OF BOOK NOW PAGE SETTINGS ---------------------   */
+
+/* START OF BOOK NOW BUTTONS */
+.book--button__primary {
+    font-family: Montserrat;
+    padding: 15px 25px;
+    background-color: #413df7;
+    border: solid 3px #413df7;
+    border-radius: 5px;
+    font-weight: 500;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    margin: auto;
+}
+
+.book--button__primary:hover {
+    background-color: rgba(65, 61, 247,0.8);
+    border-color: rgba(65, 61, 247,0.8);
+}
+/* END OF BOOK NOW BUTONS  */
 .book {
     margin-top: 50px;
 }
@@ -889,22 +923,22 @@ body {
 }
 
 .book-form__child-1 {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .book-form__child-2 {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .input-field-dates {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 2px solid #413df7;
+    border-bottom: 2px solid #cb46d3;
     padding: 12px;
     font-size: 14px;
     font-family: montserrat;
-    width: 200px;
+    width: 150px;
 }
 
 .filter-options {
@@ -920,19 +954,18 @@ body {
 
 .find-app {
     display: flex;
-    justify-content: flex-end;
-    margin: 30px 18px 0 auto;
-    padding-left: 40px;
-    padding-right: 40px;
+    justify-content: center;
+    margin: 30px auto;
 }
 
 .booking-info {
+    padding-top: 15px;
     display: flex;
     justify-content: space-around;
     min-width: 400px;
-    background-color: #0a2c3a;
+    background-color: white;
     border-radius: 5px;
-    color: white;
+    border: 1px solid #cccccc;
 }
 
 .appointment {
@@ -941,13 +974,13 @@ body {
     min-width: 400px;
     background-color: white;
     margin: 20px 0;
-    border: 2px solid #0a2c3a;
+    border: 1px solid #cccccc;
     border-radius: 5px;
     color: #0a2c3a;
 }
 
 .active, .appointment:hover {
-    background-color: #0a2c3a;
+    background-color: #413df7;
     color: white;
     cursor: pointer;
 }
@@ -958,8 +991,9 @@ body {
 
 .book-form__child-3 {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    row-gap: 30px;
 }
 
 .selection-box {
@@ -967,12 +1001,11 @@ body {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 2px solid #413df7;
+    border-bottom: 2px solid #cb46d3;
     padding: 12px 0px 12px 10px;
     font-size: 14px;
     font-family: montserrat;
 }
-
 /* -----360px PLUS ---------------- END OF BOOK NOW PAGE SETTINGS ---------------------   */
 /* -----360px PLUS ----- START OF LOGIN PAGE SETTINGS ---------------------   */
 .login {
