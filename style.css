@@ -11,7 +11,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: montserrat;
+    /*Font used throughout website. Fallback font is sans-serif */
+    font-family: montserrat, sans-serif;
     position: relative;
 }
 
@@ -360,6 +361,13 @@ body {
     cursor: pointer;
     margin-right: 50px;
 }
+
+.location {
+    width: 250px;
+    height: 300px;
+    border: 0;
+}
+
 /* -----MOBILE 360px- 1000px ---------------- END OF FOOTER SETTINGS ---------------------   */
 /* -----DESKTOP 1000px PLUS ---------------- START OF FOOTER SETTINGS ---------------------   */
 @media (min-width: 1000px) {
@@ -393,6 +401,10 @@ body {
     .h4-footer {
         font-size: 28px;
         font-weight: 800;
+    }
+
+    .footer__address {
+        max-width: 380px;
     }
 }
 /* -----DESKTOP 1000px PLUS ---------------- END OF FOOTER SETTINGS ---------------------   */
