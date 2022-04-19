@@ -2,16 +2,16 @@
 /* Arrow Function to Toggle the Navbar into desktop mode.
 the 'active' class will be added to navLinks and display the desktop view at 1000px. check CSS line 102.*/
 toggleNav = () => {
-    const navLinks = document.getElementsByClassName('nav__links')[0];
+    const navLinks = document.querySelector('.nav__links');
     navLinks.classList.toggle('active');
 }
 
 
 // onclick Arrow function to allow the user to sign up with form validation
 signedUp = () => {
-    let fNameField = document.getElementsByClassName('sign-up__fName')[0].value;
-    let emailField = document.getElementsByClassName('sign-up__email')[0].value;
-    let passField = document.getElementsByClassName('sign-up__pass')[0].value;
+    let fNameField = document.querySelector('.sign-up__fName').value;
+    let emailField = document.querySelector('.sign-up__email').value;
+    let passField = document.querySelector('.sign-up__pass').value;
 
     if(fNameField == '' || emailField == '' || passField == ''){
         alert("Please fill out the required fields and complete the form.");
@@ -24,8 +24,8 @@ signedUp = () => {
 
 // onclick Arrow function to allow the user to login with form validation
 login = () => {
-    let email = document.getElementsByClassName('loginEmail')[0].value;
-    let pass = document.getElementsByClassName('loginPass')[0].value;
+    let email = document.querySelector('.loginEmail').value;
+    let pass = document.querySelector('.loginPass').value;
 
     if(email == '' || pass == ''){
         alert("Please make sure your information is correct.");
@@ -103,7 +103,6 @@ showBooking = () => {
         }
     }
 }
-
 
 
 
